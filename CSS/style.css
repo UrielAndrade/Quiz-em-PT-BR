@@ -1,0 +1,137 @@
+.conteinerPrincipal {
+    margin: 30px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    min-height: 500px;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.questao {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+    word-wrap: break-word;
+    transition: color 0.3s ease;
+}
+
+.questao:hover {
+    transform: scale(1.02);
+    color: #007bff;
+}
+
+.listaRespostas {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.itemResposta {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itemResposta:hover {
+    background-color: #e0e0e0;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.itemResposta.correct {
+    color: #28a745;
+    font-weight: bold;
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+}
+
+.itemResposta.incorrect {
+    color: #dc3545;
+    background-color: #f8d7da;
+    text-decoration: line-through;
+    border: 2px solid #dc3545;
+}
+
+.answered {
+    background-color: #e0f7e0;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .conteinerPrincipal {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .questao {
+        font-size: 1.5em;
+    }
+
+    .itemResposta {
+        font-size: 1.1em;
+    }
+}
+
+button.reiniciarQuiz {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.reiniciarQuiz:hover {
+    background-color: #0056b3;
+}
+
+button.reiniciarQuiz:focus {
+    outline: none;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    text-decoration: line-through;
+}
+
+.itemResposta {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.itemResposta:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

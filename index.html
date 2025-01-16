@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Quiz</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/modal.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Bem-vindo ao Quiz</h1>
+        <button class="comecarQuiz" onclick="showQuestionCountModal()">Iniciar Quiz</button>
+    </div>
+    <div id="questionCountModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Quantas questões você deseja?</h2>
+            <select id="questionCount">
+                <option value="5">5 Questões</option>
+                <option value="10">10 Questões</option>
+                <option value="15">15 Questões</option>
+                <option value="20">20 Questões</option>
+                <option value="30">30 Questões</option>
+            </select>
+            <button onclick="startQuiz()" id="initializeWeglotButton">Iniciar Quiz</button>
+        </div>
+    </div>
+
+    <script src="JS/strartquiz.js"></script>
+    <script src="JS/translate.js"></script>
+    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <script>
+document.getElementById('initializeWeglotButton').addEventListener('click', () => {
+    setTimeout(() => {
+        Weglot.initialize({
+            api_key: 'wg_627c1b8ae91049ce28e44bc3d33381230'
+        });
+    }, 4000); // Espera 4 segundos
+});
+    </script>
+</body>
+</html>   
