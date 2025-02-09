@@ -46,19 +46,3 @@
     background-color: #e53935;
     transform: translateY(-3px);
 }
-
-@media (max-width: 768px) {
-    .menu-container {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .menu-container h1 {
-        font-size: 1.5em;
-    }
-
-    .menu-container button {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
